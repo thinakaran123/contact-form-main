@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon  -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <p>Contact Us</p>
+        <!-- form begins -->
+        <form id="myform" autocomplete="off">
+          <!-- names including firstname & lastname -->
+          <div id="names" class="names">
+            <!-- firstname -->
+            <div class="firstnamediv">
+              <label class="firstname" for="first_name">First Name *</label>
+              <input
+                required
+                autocomplete="off"
+                name="first_name"
+                id="first_name"
+                class="normalinputbox firstname_input"
+                type="text"
+              />
+              <span id="msg_for_firstname" class="color"
+                >This field is required</span
+              >
+            </div>
+            <!-- lastname -->
+            <div class="lastnamediv">
+              <label class="lastname" for="last_name">Last Name *</label>
+
+              <input
+                id="last_name"
+                name="last_name"
+                required
+                class="normalinputbox lastname-input"
+                type="text"
+              />
+              <span id="msg_for_lastname" class="color"
+                >This field is required</span
+              >
+            </div>
+          </div>
+          <!-- ---------------mail--------- -->
+          <label id="label_for_mail" class="maillabel" for="mailbox"
+            >Email Address *</label
+          >
+          <input
+            required
+            id="mailbox"
+            class="normalinputbox mailbox"
+            type="email"
+          />
+          <span id="msg_for_invalid_mail" class="msg_for_invalid_msg color"
+            >Please enter a valid email address</span
+          >
+          <span id="msg_for_mail" class="color">This field is required</span>
+
+          <!-- --------------query----------- -->
+          <label class="querylabel">Query Type *</label>
+
+          <div class="querytypetotaldiv">
+            <div class="outerquerydiv1">
+              <div id="querytypediv-q1" class="querytypediv-q1">
+                <input
+                  id="general_enquiry"
+                  name="queryname"
+                  class="radioinput"
+                  type="radio"
+                />
+                <label
+                  for="general_enquiry"
+                  id="label1forquery"
+                  class="labelofquerydiv"
+                  >General Enquiry</label
+                >
+              </div>
+            </div>
+            <div class="outerquerydiv2">
+              <div id="querytypediv-q2" class="querytypediv-q2">
+                <input
+                  id="support_request"
+                  name="queryname"
+                  class="radioinput"
+                  type="radio"
+                />
+                <label for="support_request" class="labelofquerydiv"
+                  >Support Request</label
+                >
+              </div>
+            </div>
+          </div>
+          <span id="msg_for_query" class="msg_for_query color"
+            >Please select a query type</span
+          >
+
+          <!-- msg box -->
+          <label for="message_box" id="labelformsg" class="labelformsg"
+            >Message *</label
+          >
+          <input required id="message_box" type="text" class="msgbox" />
+          <span id="msg_or_txtbox" class="msg_or_txtbox color"
+            >This field is required</span
+          >
+
+          <!-- tickbox -->
+          <div class="lasttickbox">
+            <input required id="cb" type="checkbox" />
+            <label for="cb">I consent to being contacted by the team *</label>
+          </div>
+          <span id="tickboxmsg" class="msg_for_tickbox color"
+            >To submit this form, please consent to being contacted</span
+          >
+          <button id="btn" type="submit">Submit</button>
+        </form>
+
+        <!-- form completed msg -->
+        <div id="divforflexsuccessmsg" class="divforflexsuccessmsg">
+          <div id="success msg" class="success_msg">
+            <div id="success_msg_1">
+              <img
+                id="success_img"
+                src="assets/images/icon-success-check.svg"
+                alt=""
+              />
+              <p>Message Sent!</p>
+            </div>
+            <div id="success_msg_2">
+              Thanks for completing the form. We'll be in touch soon!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

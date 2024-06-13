@@ -1,0 +1,311 @@
+:root {
+  /* Colors */
+
+  /* ### Primary */
+  /* (lighter) */
+  --Green200: hsl(148, 38%, 91%);
+  /* (medium) */
+  --Green600: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  /* (medium) */
+  --Grey500: hsl(186, 15%, 59%);
+  /* (darker) */
+  --Grey900: hsl(187, 24%, 22%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--Green200);
+}
+/* .container */
+.container {
+  background-color: var(--White);
+  width: min(40rem, 90vw);
+  height: 100%;
+
+  padding: 20px;
+  margin: 105px auto;
+  border-radius: 7px;
+}
+.container p:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+/* ----------------- redborder --------------------- */
+.red-border {
+  border-color: var(--Red);
+}
+/* -------------------label----------- */
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+/* ------------normalinputbox (1stname ,2nd name and mail)-----------*/
+.normalinputbox {
+  border-radius: 7px;
+  height: 6vh;
+  border: 1px solid var(--Grey900);
+  margin-bottom: 15px;
+}
+.normalinputbox:hover {
+  border-color: var(--Green600);
+  cursor: pointer;
+}
+
+/* --------------------color of error msg -------------*/
+.color {
+  color: var(--Red);
+}
+/*-------------------- names ----------------------*/
+.names {
+  height: 26vh;
+  display: flex;
+  flex-direction: column;
+}
+/* ---------------- firstname ------------------ */
+.firstnamediv {
+  display: flex;
+  flex-direction: column;
+}
+#first_name:active {
+  border-color: var(--Green600);
+}
+
+#msg_for_firstname {
+  margin-top: -13px;
+  margin-bottom: 10px;
+  display: none;
+}
+/* ---------------- lastname ------------------ */
+.lastnamediv {
+  display: flex;
+  flex-direction: column;
+}
+#msg_for_lastname {
+  margin-top: -13px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* -----------------mailbox----------------- */
+
+#msg_for_invalid_mail {
+  display: none;
+  margin-top: -10px;
+}
+#msg_for_mail {
+  display: none;
+  margin-top: -10px;
+}
+
+/* -------------query------------- */
+
+.querylabel {
+  margin-top: 10px;
+}
+.querytypetotaldiv {
+  display: flex;
+  width: 100%;
+
+  height: 15vh;
+  gap: 15px;
+  flex-direction: column;
+}
+.outerquerydiv1 {
+  width: 100%;
+}
+.outerquerydiv2 {
+  width: 100%;
+}
+
+.querytypediv-q1,
+.querytypediv-q2 {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 7px;
+
+  border: 1px solid;
+}
+#querytypediv-q1:hover {
+  border-color: var(--Green600);
+}
+
+#querytypediv-q2:hover {
+  border-color: var(--Green600);
+}
+.radioinput {
+  accent-color: var(--Green600);
+  width: 15px;
+}
+
+.labelofquerydiv {
+  margin-bottom: 0;
+}
+#msg_for_query {
+  display: none;
+  margin-top: 15px;
+}
+
+/* msgbox */
+.msg_or_txtbox {
+  display: none;
+  margin-top: 5px;
+}
+.labelformsg {
+  margin-top: 20px;
+}
+.msgbox {
+  border-radius: 7px;
+  border: 1px solid var(--Grey900);
+
+  height: 180px;
+}
+/* }
+lasttickbox */
+.lasttickbox {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+label[for="cb"] {
+  margin-top: 10px;
+}
+input[type="checkbox"]:checked {
+  accent-color: var(--Green600);
+  mix-blend-mode: multiply;
+}
+.msg_for_tickbox {
+  display: none;
+}
+/* submit button */
+/* sumbmit button */
+button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Green600);
+  margin-top: 25px;
+  padding: 12px;
+}
+button:hover {
+  background-color: rgb(6 63 53);
+}
+
+/*msg completed box*/
+.divforflexsuccessmsg {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+}
+#success_msg_1 {
+  display: flex;
+  gap: 10px;
+  color: var(--White);
+  font-size: 18px;
+}
+#success_msg_2 {
+  color: var(--Grey500);
+}
+
+.success_msg {
+  position: absolute;
+  top: 1%;
+
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 0;
+  height: 13vh;
+  width: min(29rem, 90vw);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+
+  background-color: var(--Grey900);
+}
+
+/* .attribution */
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* 
+----------------------------------------------------- */
+/* mediaquery */
+@media screen and (min-width: 450px) {
+  .container {
+    margin-top: 100px;
+    height: 100%;
+  }
+  /* names */
+  .names {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .firstnamediv {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .firstname-input {
+    width: 100%;
+  }
+  .lastnamediv {
+    width: 50%;
+  }
+  .lastname-input {
+    width: 100%;
+  }
+
+  .lastnamediv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* query */
+  .querytypetotaldiv {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .outerquerydiv1 {
+    width: 50%;
+  }
+  .outerquerydiv2 {
+    width: 50%;
+  }
+
+  /* /msg box */
+  .msgbox {
+    height: 100px;
+  }
+}
