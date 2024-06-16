@@ -17,8 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ([https://your-solution-url.com](https://thinakaran123.github.io/contact-form-main/))
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://thinakaran123.github.io/contact-form-main/
 
 ### Built with
 
